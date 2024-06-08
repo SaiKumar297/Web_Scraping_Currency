@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Data</title>
+</head>
+<body>
+    <h1>Scraped Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+                <th>Volume (24h)</th>
+                <th>Circulating Supply</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for coin in scraped_data %}
+            <tr>
+                <td>{{ coin.rank }}</td>
+                <td>{{ coin.name }}</td>
+                <td>{{ coin.symbol }}</td>
+                <td>{{ coin.price }}</td>
+                <td>{{ coin.market_cap }}</td>
+                <td>{{ coin.volume }}</td>
+                <td>{{ coin.circulating_supply }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
